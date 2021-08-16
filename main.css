@@ -30,8 +30,10 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: #0E1B36;
-  padding: 0 10px;
+  padding: 0 20px;
   height: 90px;
+  /*width: 100%;
+  position: fixed;*/
 }
 header img {
   vertical-align: middle;
@@ -61,10 +63,12 @@ header select option {
   background-size: cover;
   display: flex;
   align-items: flex-end;
+  justify-content: space-between;
 }
 #s1 .shapes {
   display: flex;
   padding: 0 15px 3%;
+  width: 100%;
   justify-content: space-between;
 }
 #s1 .rect {
@@ -73,9 +77,24 @@ header select option {
   color: #FFF;
   flex: 1;
 }
+#s1 .rect h2 {
+  font-size: 60px;
+}
+#s1 .rect p {
+  font-size: 50px;
+}
 #s1 .hexagon {
   flex: 1;
-  background-image: url("images/hexagon.png");
+  background: url("images/hexagon.png") no-repeat;
+  background-size: contain;
+  width: 260px;
+  height: 300px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+#s1 .hexagon p {
+  text-align: left;
 }
 
 nav {
@@ -166,6 +185,7 @@ nav a:hover {
   display: flex;
   background-image: url("images/bg3.jpg");
   background-size: cover;
+  padding: 0 2%;
   min-height: 185px;
 }
 #s3 div,
@@ -178,7 +198,194 @@ nav a:hover {
 #s3 a {
   background: url("images/hexagon2.png") no-repeat;
   background-size: contain;
-  width: 115px;
-  height: 131px;
+  background-position: center;
+  text-align: center;
+  width: 135px;
+  height: 154px;
   flex: 1;
+}
+
+#s4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url(images/bg4.jpg) no-repeat;
+  background-size: cover;
+}
+#s4 a {
+  background: url("images/hexagon3.png") no-repeat;
+  background-size: contain;
+  width: 204px;
+  height: 233px;
+  display: flex;
+  justify-content: center;
+  margin: auto 50px;
+}
+#s4 p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+#s4 .line2 img {
+  max-width: 100%;
+}
+#s4 .line3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#s5 {
+  background: url(images/bg5.jpg) no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+#s5 a {
+  background: url("images/hexagon4.png") no-repeat;
+  background-size: contain;
+  width: 180px;
+  height: 209px;
+  display: flex;
+  justify-content: center;
+  margin: auto 50px;
+}
+#s5 p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#s5 .hexex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#s5 .hex {
+  display: flex;
+  flex-direction: column;
+  width: 190px;
+  margin: 1%;
+}
+#s5 .hex__text {
+  height: 180px;
+  height: 245px;
+  background-size: contain;
+}
+#s5 .hex .top img {
+  max-width: 100%;
+  height: auto;
+}
+#s5 .hex .bot1 {
+  background: url("images/bottom1.png") no-repeat;
+  background-size: contain;
+}
+#s5 .hex .bot2 {
+  background: url("images/bottom2.png") no-repeat;
+  background-size: contain;
+}
+#s5 .hex .bot3 {
+  background: url("images/bottom3.png") no-repeat;
+  background-size: contain;
+}
+
+#s6 {
+  background-color: #ebf1f6;
+}
+#s6 h3 {
+  text-align: center;
+}
+#s6 a {
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+}
+#s6 .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#s6 .text * {
+  margin: 0;
+}
+#s6 .blocks {
+  display: flex;
+}
+#s6 .windows {
+  background: url("images/windows.png"), linear-gradient(to bottom, #115eaa, #198bd9);
+  background-repeat: no-repeat;
+  background-position: 10% center;
+  height: 90px;
+}
+#s6 .apple {
+  background: url("images/apple.png"), linear-gradient(to bottom, #115eaa, #198bd9);
+  background-repeat: no-repeat;
+  background-position: 10% center;
+  height: 90px;
+}
+#s6 .noimage {
+  border-radius: 5px;
+  background: linear-gradient(to bottom, #dc7313, #edad41);
+  height: 90px;
+  text-align: center;
+}
+#s6 .cards {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+#s6 .cards .big {
+  margin: 5%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+}
+#s6 .cards .big a {
+  margin-left: 1%;
+}
+#s6 .cards .small {
+  display: flex;
+  justify-content: space-evenly;
+}
+#s6 .cards .small1 div, #s6 .cards .small2 div {
+  display: flex;
+  flex: 1;
+}
+#s6 .devices {
+  width: 40%;
+}
+#s6 .devices img {
+  max-width: 100%;
+  height: auto;
+}
+
+footer {
+  background-color: #121f3a;
+  color: #777777;
+  display: flex;
+  flex-direction: column;
+}
+footer .footer1,
+footer .footer2 {
+  display: flex;
+}
+footer .footer1 {
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer2 {
+  display: flex;
+  flex-direction: row-reverse;
+}
+footer .footer2__text1 {
+  flex: 1;
+  text-align: right;
+}
+footer .footer2__text2 {
+  flex: 1;
+  text-align: left;
+  vertical-align: middle;
 }

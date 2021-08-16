@@ -30,8 +30,13 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: #0E1B36;
-    padding: 0 10px;
+    padding: 0 20px;
     height: 90px;
+
+
+    /*width: 100%;
+    position: fixed;*/
+
 
     img {
         vertical-align: middle;
@@ -65,10 +70,12 @@ header {
     background-size: cover;
     display: flex;
     align-items: flex-end;
+    justify-content: space-between;
 
     .shapes {
         display: flex;
         padding: 0 15px 3%;
+        width: 100%;
         justify-content: space-between;
     }
 
@@ -77,11 +84,29 @@ header {
         background-color: #000;
         color: #FFF;
         flex: 1;
+
+        h2 {
+            font-size: 60px;
+        }
+
+        p {
+            font-size: 50px;
+        }
     }
 
     .hexagon {
         flex: 1;
-        background-image: url("images/hexagon.png");
+        background: url("images/hexagon.png") no-repeat;
+        background-size: contain;
+        width: 260px;
+        height: 300px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+
+        p {
+            text-align: left;
+        }
     }
 }
 
@@ -181,6 +206,7 @@ nav {
     display: flex;
     background-image: url("images/bg3.jpg");
     background-size: cover;
+    padding: 0 2%;
     min-height: 185px;
 
     div,
@@ -194,8 +220,242 @@ nav {
     a {
         background: url("images/hexagon2.png") no-repeat;
         background-size: contain;
-        width: 115px;
-        height: 131px;
+        background-position: center;
+        text-align: center;
+        width: 135px;
+        height: 154px;
         flex: 1;
+    }
+}
+
+#s4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(images/bg4.jpg) no-repeat;
+    background-size: cover;
+
+    a {
+        background: url("images/hexagon3.png") no-repeat;
+        background-size: contain;
+        width: 204px;
+        height: 233px;
+        display: flex;
+        justify-content: center;
+        margin: auto 50px;
+    }
+
+    p {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+
+
+    }
+
+    .line2 img {
+        max-width: 100%;
+    }
+
+    .line3 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+    }
+}
+
+#s5 {
+    background: url(images/bg5.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    a {
+        background: url("images/hexagon4.png") no-repeat;
+        background-size: contain;
+        width: 180px;
+        height: 209px;
+        display: flex;
+        justify-content: center;
+        margin: auto 50px;
+    }
+
+    p {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .hexex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .hex {
+        display: flex;
+        flex-direction: column;
+        width: 190px; //220
+        margin: 1%;
+
+        &__text {
+            height: 180px; //245
+            height: 245px;
+
+            background-size: contain;
+        }
+
+        .top {
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        .bot1 {
+            background: url("images/bottom1.png") no-repeat;
+            background-size: contain;
+        }
+
+        .bot2 {
+            background: url("images/bottom2.png") no-repeat;
+            background-size: contain;
+        }
+
+        .bot3 {
+            background: url("images/bottom3.png") no-repeat;
+            background-size: contain;
+        }
+
+    }
+
+}
+
+#s6 {
+    background-color: #ebf1f6;
+
+    h3 {
+        text-align: center;
+    }
+
+    a {
+        display: flex;
+        flex-direction: row;
+        width: 300px;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        * {
+            margin: 0;
+        }
+    }
+
+    .blocks {
+        display: flex;
+
+    }
+
+    .windows {
+        background: url("images/windows.png"), linear-gradient(to bottom, #115eaa, #198bd9);
+        background-repeat: no-repeat;
+        background-position: 10% center;
+        height: 90px;
+    }
+
+    .apple {
+        background: url("images/apple.png"), linear-gradient(to bottom, #115eaa, #198bd9);
+        background-repeat: no-repeat;
+        background-position: 10% center;
+        height: 90px;
+    }
+
+    .noimage {
+        border-radius: 5px;
+        background: linear-gradient(to bottom, #dc7313, #edad41);
+        height: 90px;
+        text-align: center;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+
+        .big {
+            margin: 5%;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-evenly;
+
+            a {
+                margin-left: 1%;
+            }
+        }
+
+        .small {
+            display: flex;
+            justify-content: space-evenly;
+
+            &1 div,
+            &2 div {
+                display: flex;
+                flex: 1;
+
+
+            }
+        }
+    }
+
+    .devices {
+        width: 40%;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
+
+footer {
+    background-color: #121f3a;
+    color: #777777;
+    display: flex;
+    flex-direction: column;
+
+    .footer1,
+    .footer2 {
+        display: flex;
+    }
+
+    .footer1 {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer2 {
+        display: flex;
+        flex-direction: row-reverse;
+
+        &__text1 {
+            flex: 1;
+            text-align: right;
+
+        }
+
+        &__text2 {
+            flex: 1;
+            text-align: left;
+            vertical-align: middle;
+        }
+
     }
 }
