@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 body {
     margin: 0;
     direction: rtl;
+    font-family: 'Open Sans', sans-serif;
 }
 
 a,
@@ -13,6 +16,22 @@ a:visited {
     font-size: 70px;
 }
 
+.f62 {
+    font-size: 62px;
+}
+
+.f50 {
+    font-size: 50px;
+}
+
+.f44 {
+    font-size: 44px;
+}
+
+.f40 {
+    font-size: 40px;
+}
+
 .f36 {
     font-size: 36px;
 }
@@ -23,6 +42,18 @@ a:visited {
 
 .f24 {
     font-size: 24px;
+}
+
+.f22 {
+    font-size: 22px;
+}
+
+.f16 {
+    font-size: 16px;
+}
+
+.white, #menu, .block p, .hex__text p:first-of-type, .big{
+    color: #fff;
 }
 
 header {
@@ -44,7 +75,6 @@ header {
 
     #menu a {
         margin-left: 40px;
-        color: #fff;
     }
 
     select {
@@ -77,25 +107,32 @@ header {
         padding: 0 15px 3%;
         width: 100%;
         justify-content: space-between;
+        padding: 0 5% 3%;
     }
 
     .rect {
         padding: 20px 25px;
-        background-color: #000;
+        background-color: rgba(0,0,0,0.8);
         color: #FFF;
-        flex: 1;
+        height: 65%;
+        align-self: center;
+   
 
         h2 {
             font-size: 60px;
+            margin: 0;
+            color: #e88b0c;
         }
 
         p {
             font-size: 50px;
+            margin: 0;
+            color: #5da9dd;
         }
     }
 
     .hexagon {
-        flex: 1;
+  
         background: url("images/hexagon.png") no-repeat;
         background-size: contain;
         width: 260px;
@@ -103,11 +140,19 @@ header {
         text-align: center;
         display: flex;
         align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-left: 200px;
 
-        p {
-            text-align: left;
-        }
-    }
+        &::before {
+            content: url(images/white.png);
+            position: absolute;
+            //left: -50%;
+            top: -20%;
+            left: -150px;
+            }
+
+}
 }
 
 nav {
@@ -117,7 +162,7 @@ nav {
     align-items: center;
 
     a {
-        padding: 0 5px;
+        padding: 0 15px;
         line-height: 80px;
 
         &:hover {
@@ -134,10 +179,13 @@ nav {
 }
 
 .box {
+    width: 80%;
     display: flex;
     justify-content: space-between;
     padding: 0 15px;
     align-items: center;
+    padding: 0 15px;
+    margin: 0 auto;
 
     a {
         color: #000000;
@@ -209,12 +257,23 @@ nav {
     padding: 0 2%;
     min-height: 185px;
 
+    .block {
+       display: flex;
+       flex-direction: row;
+       margin: 0 5%;
+
+       p {
+           margin: 0 0 10px 10px;
+       }
+
+    }
+
     div,
     a {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        flex: 2;
+        flex: 1;
     }
 
     a {
@@ -229,11 +288,17 @@ nav {
 }
 
 #s4 {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 60px 0 40px;
     background: url(images/bg4.jpg) no-repeat;
     background-size: cover;
+
+    .inner {
+        padding: 45px 0;
+    }
 
     a {
         background: url("images/hexagon3.png") no-repeat;
@@ -250,12 +315,12 @@ nav {
         flex-direction: column;
         justify-content: center;
         text-align: center;
-
-
     }
 
     .line2 img {
         max-width: 100%;
+        position: relative;
+
     }
 
     .line3 {
@@ -265,6 +330,77 @@ nav {
         justify-content: center;
 
     }
+
+    .div3 {
+        display: flex;
+        position: relative;
+        height: 400px;
+    }
+
+    .pop1, .pop2, .pop3 {
+        z-index: 1;
+       // top: -150px;
+            margin: 30px auto;
+            position: absolute;
+            width: 125px;
+            height: 125px;
+            font-size: 16px;
+            line-height: normal;
+            font-family: NexaLight;
+            text-align: center;
+            border-radius: 100%;
+            border: 2px solid #167bc0;
+            background-color: #167bc0;
+            color: #fff;
+        }
+    
+    img {
+        width: 80%;
+        left: 200px;
+        top: 0px;
+        }
+
+    .pop1 {
+        left: 50%;
+        top: 0px;
+    }
+
+    .pop2 {
+        right: 0;
+        top: 150px;
+    }
+    
+    .pop3 {
+        left: 0;
+        top: 150px;
+    }
+
+
+    /*::before {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 20px 10px 0 10px;
+            border-color: #167cc0 transparent transparent transparent;
+        }
+
+        .pop1:l::before{
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -20px;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 10px 0 10px 20px;
+            border-color: transparent transparent transparent #167cc0;
+        }*/
 }
 
 #s5 {
@@ -275,6 +411,11 @@ nav {
     align-items: center;
     text-align: center;
 
+    .f62, .f44 {
+        margin: 0 0 20px;
+    }
+ 
+    
     a {
         background: url("images/hexagon4.png") no-repeat;
         background-size: contain;
@@ -305,7 +446,7 @@ nav {
 
         &__text {
             height: 180px; //245
-            height: 245px;
+       
 
             background-size: contain;
         }
@@ -332,27 +473,43 @@ nav {
             background-size: contain;
         }
 
+        .bot4 {
+            background: url("images/bottom4.png") no-repeat;
+            background-size: contain;
+        }
+
     }
 
 }
 
 #s6 {
     background-color: #ebf1f6;
+    padding-top: 60px;
+    padding-bottom: 40px;
 
     h3 {
         text-align: center;
+        margin: 0;
+        color: #167bc0;
     }
 
     a {
         display: flex;
-        flex-direction: row;
         width: 300px;
+        border-radius: 5px;
+        
+        p {
+            margin: 0;
+        }
     }
 
     .text {
+        flex: 1;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        padding-left: 25%;
+        text-align: left;
 
         * {
             margin: 0;
@@ -361,6 +518,7 @@ nav {
 
     .blocks {
         display: flex;
+        padding: 0 10px;
 
     }
 
@@ -383,18 +541,26 @@ nav {
         background: linear-gradient(to bottom, #dc7313, #edad41);
         height: 90px;
         text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .cards {
         display: flex;
         flex-direction: column;
-        width: 60%;
+        align-items: flex-start;
 
+        .f40 {
+                color: #253f76;
+            }
+ 
         .big {
-            margin: 5%;
+      
             display: flex;
             flex-direction: row-reverse;
             justify-content: space-evenly;
+            margin-bottom: 30px;
 
             a {
                 margin-left: 1%;
@@ -403,20 +569,27 @@ nav {
 
         .small {
             display: flex;
-            justify-content: space-evenly;
+            width: 100%;
+            &__1,
+            &__2 {
 
-            &1 div,
-            &2 div {
-                display: flex;
                 flex: 1;
+            }
+            &__1 div,
+            &__2 div {
+                display: flex;
+                margin-bottom: 30px;
+            }
 
-
+            img {
+                margin-left: 20px;
             }
         }
     }
 
     .devices {
         width: 40%;
+        padding: 0 10px;
 
         img {
             max-width: 100%;
@@ -426,10 +599,12 @@ nav {
 }
 
 footer {
+    font-style: italic;
     background-color: #121f3a;
     color: #777777;
     display: flex;
     flex-direction: column;
+    padding: 20px 75px 30px;
 
     .footer1,
     .footer2 {
@@ -439,6 +614,7 @@ footer {
     .footer1 {
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
     .footer2 {
@@ -458,4 +634,26 @@ footer {
         }
 
     }
+}
+
+@media screen and (max-width: 1110px) {
+    .devices {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 759px) {
+    #s2, #s3, #s4, #s5, #s6, #menu, nav, #s1 .hexagon {
+        display: none;
+    }
+    header {
+        justify-content: center;
+    }
+
+    #s1 .rect {
+        width: 100%;
+        text-align: center;
+    }
+
+
 }
