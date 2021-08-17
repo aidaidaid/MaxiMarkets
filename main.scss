@@ -36,6 +36,10 @@ a:visited {
     font-size: 36px;
 }
 
+.f34 {
+    font-size: 30px;
+}
+
 .f30 {
     font-size: 30px;
 }
@@ -52,7 +56,11 @@ a:visited {
     font-size: 16px;
 }
 
-.white, #menu, .block p, .hex__text p:first-of-type, .big{
+.white,
+#menu,
+.block p,
+.hex__text p:first-of-type,
+.big {
     color: #fff;
 }
 
@@ -63,11 +71,6 @@ header {
     background-color: #0E1B36;
     padding: 0 20px;
     height: 90px;
-
-
-    /*width: 100%;
-    position: fixed;*/
-
 
     img {
         vertical-align: middle;
@@ -98,6 +101,7 @@ header {
     height: 70vh;
     background-image: url("images/bg1.jpg");
     background-size: cover;
+    background-position: center;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -112,11 +116,10 @@ header {
 
     .rect {
         padding: 20px 25px;
-        background-color: rgba(0,0,0,0.8);
+        background-color: rgba(0, 0, 0, 0.8);
         color: #FFF;
         height: 65%;
         align-self: center;
-   
 
         h2 {
             font-size: 60px;
@@ -132,7 +135,7 @@ header {
     }
 
     .hexagon {
-  
+
         background: url("images/hexagon.png") no-repeat;
         background-size: contain;
         width: 260px;
@@ -147,12 +150,11 @@ header {
         &::before {
             content: url(images/white.png);
             position: absolute;
-            //left: -50%;
             top: -20%;
             left: -150px;
-            }
+        }
 
-}
+    }
 }
 
 nav {
@@ -187,6 +189,20 @@ nav {
     padding: 0 15px;
     margin: 0 auto;
 
+    div {
+        margin: 0 20px;
+        background-size: cover;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        * {
+            margin: 0 0 20px 0;
+        }
+    }
+
+
     a {
         color: #000000;
         font-family: NexaLight;
@@ -204,49 +220,28 @@ nav {
 
 .box1 {
     background-image: url("images/box1.png");
-    background-size: cover;
     width: 303px;
     height: 359px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 
     * {
         transform: skewY(-6deg);
-        margin: 0 0 20px 0;
     }
 }
 
 .box2 {
     background-image: url("images/box2.png");
-    background-size: cover;
     width: 396px;
     height: 396px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    * {
-        margin: 0 0 20px 0;
-    }
 
 }
 
 .box3 {
     background-image: url("images/box3.png");
-    background-size: cover;
     width: 303px;
     height: 359px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 
     * {
         transform: skewY(6deg);
-        margin: 0 0 20px 0;
     }
 }
 
@@ -258,13 +253,13 @@ nav {
     min-height: 185px;
 
     .block {
-       display: flex;
-       flex-direction: row;
-       margin: 0 5%;
+        display: flex;
+        flex-direction: row;
+        margin: 0 5%;
 
-       p {
-           margin: 0 0 10px 10px;
-       }
+        p {
+            margin: 0 0 10px 10px;
+        }
 
     }
 
@@ -317,10 +312,18 @@ nav {
         text-align: center;
     }
 
+    .line1 {
+        text-align: center;
+        color: #253f76;
+
+        span {
+            color: #167bc0;
+        }
+    }
+
     .line2 img {
         max-width: 100%;
         position: relative;
-
     }
 
     .line3 {
@@ -328,7 +331,6 @@ nav {
         flex-direction: row;
         align-items: center;
         justify-content: center;
-
     }
 
     .div3 {
@@ -337,28 +339,29 @@ nav {
         height: 400px;
     }
 
-    .pop1, .pop2, .pop3 {
+    .pop1,
+    .pop2,
+    .pop3 {
         z-index: 1;
-       // top: -150px;
-            margin: 30px auto;
-            position: absolute;
-            width: 125px;
-            height: 125px;
-            font-size: 16px;
-            line-height: normal;
-            font-family: NexaLight;
-            text-align: center;
-            border-radius: 100%;
-            border: 2px solid #167bc0;
-            background-color: #167bc0;
-            color: #fff;
-        }
-    
+        margin: 30px auto;
+        position: absolute;
+        width: 125px;
+        height: 125px;
+        font-size: 16px;
+        line-height: normal;
+        font-family: NexaLight;
+        text-align: center;
+        border-radius: 100%;
+        border: 2px solid #167bc0;
+        background-color: #167bc0;
+        color: #fff;
+    }
+
     img {
         width: 80%;
         left: 200px;
         top: 0px;
-        }
+    }
 
     .pop1 {
         left: 50%;
@@ -369,38 +372,11 @@ nav {
         right: 0;
         top: 150px;
     }
-    
+
     .pop3 {
         left: 0;
         top: 150px;
     }
-
-
-    /*::before {
-            content: '';
-            position: absolute;
-            bottom: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 20px 10px 0 10px;
-            border-color: #167cc0 transparent transparent transparent;
-        }
-
-        .pop1:l::before{
-            content: '';
-            position: absolute;
-            top: 50%;
-            right: -20px;
-            transform: translateY(-50%);
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 10px 0 10px 20px;
-            border-color: transparent transparent transparent #167cc0;
-        }*/
 }
 
 #s5 {
@@ -411,11 +387,11 @@ nav {
     align-items: center;
     text-align: center;
 
-    .f62, .f44 {
+    .f62,
+    .f44 {
         margin: 0 0 20px;
     }
- 
-    
+
     a {
         background: url("images/hexagon4.png") no-repeat;
         background-size: contain;
@@ -432,6 +408,12 @@ nav {
         justify-content: center;
     }
 
+    .hexexe {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .hexex {
         display: flex;
         align-items: center;
@@ -441,13 +423,11 @@ nav {
     .hex {
         display: flex;
         flex-direction: column;
-        width: 190px; //220
+        width: 190px;
         margin: 1%;
 
         &__text {
-            height: 180px; //245
-       
-
+            height: 180px;
             background-size: contain;
         }
 
@@ -497,7 +477,7 @@ nav {
         display: flex;
         width: 300px;
         border-radius: 5px;
-        
+
         p {
             margin: 0;
         }
@@ -552,11 +532,11 @@ nav {
         align-items: flex-start;
 
         .f40 {
-                color: #253f76;
-            }
- 
+            color: #253f76;
+        }
+
         .big {
-      
+
             display: flex;
             flex-direction: row-reverse;
             justify-content: space-evenly;
@@ -570,11 +550,13 @@ nav {
         .small {
             display: flex;
             width: 100%;
+
             &__1,
             &__2 {
 
                 flex: 1;
             }
+
             &__1 div,
             &__2 div {
                 display: flex;
@@ -642,10 +624,26 @@ footer {
     }
 }
 
+@media screen and (max-width: 956px) {
+    .box div {
+        width: 180px;
+        height: 220px;
+    }
+}
+
 @media screen and (max-width: 759px) {
-    #s2, #s3, #s4, #s5, #s6, #menu, nav, #s1 .hexagon {
+
+    #s2,
+    #s3,
+    #s4,
+    #s5,
+    #s6,
+    #menu,
+    nav,
+    #s1 .hexagon {
         display: none;
     }
+
     header {
         justify-content: center;
     }
